@@ -1,151 +1,278 @@
-import React, { useEffect } from 'react'
-import Header from './components/Header'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React, { useEffect } from "react";
+import Header from "./components/Header";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const About_me = () => {
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
-       easing: "ease-out-cubic" // animation speed
-         
+      easing: "ease-out-cubic",
     });
   }, []);
 
-  // css of card
-  let card = ` bg-white/5 backdrop-blur-lg
-            border border-white/10
-            
-            rounded-2xl
-            p-6 md:p-8
-            leading-relaxed
-            text-white/80
-            shadow-[0_0_30px_rgba(168,85,247,0.15)]`
+  // reusable card style
+  const card = `
+    w-full
+    max-w-[clamp(280px,90vw,500px)]
+
+    bg-white/5
+    backdrop-blur-lg
+
+    border border-white/10
+
+    rounded-2xl
+
+    p-4 sm:p-6 md:p-8
+
+    leading-relaxed
+    text-white/80
+
+    shadow-[0_0_30px_rgba(168,85,247,0.15)]
+
+    transition-all duration-300
+
+    hover:border-cyan-400/30
+    hover:shadow-[0_0_35px_rgba(168,85,247,0.25)]
+  `;
+
   return (
-    <div className='min-h-screen bg-gradient-to-b from-[#0f172a] via-[#1e1b4b] to-[#2f1547] text-white'>
+    <div className="min-h-screen bg-gradient-to-b from-[#0f172a] via-[#1e1b4b] to-[#2f1547] text-white overflow-hidden">
 
+      <Header title="About Me" />
 
-      <Header title='About Me' />
-<div className='flex'>
+      {/* MAIN CONTAINER */}
+      <div className="
+        max-w-7xl
+        mx-auto
 
-      {/* Timeline Container 1 */}
-      <div className='max-w-[40%]  px-6 mt-13 relative'
-      data-aos="fade-right">
+        px-4 sm:px-6 lg:px-10
+        py-10
 
-        {/* Vertical Line */}
-        <div className='
-          absolute left-4 top-0
-          w-[2px] h-full
-          bg-gradient-to-b from-fuchsia-400 via-violet-400 to-cyan-400
-          opacity-70
-        '></div>
+        flex flex-col
+        xl:flex-row
 
-        {/* Section Title */}
-        <h2 className='text-2xl md:text-3xl font-semibold mb-10 tracking-wide text-purple-300 ml-12'>
-          The Journey
-        </h2>
+        gap-16
+        xl:gap-24
 
-        {/* First Card */}
-        <div className='relative mb-10 ml-12'>
+        items-start
+        justify-center
+      ">
 
-          {/* Dot */}
-          <div className='
-            absolute -left-10 top-3
-            w-4 h-4 rounded-full
-            bg-fuchsia-400
-            shadow-[0_0_10px_rgba(168,85,247,0.8)]
-          '></div>
+        {/* ================= LEFT TIMELINE ================= */}
+        <div
+          className="relative w-full xl:w-1/2"
+          data-aos="fade-right"
+        >
 
-          <div className={card}>
-            <p>
-              I started programming in 11th grade when I chose Informatics Practices as an optional subject, purely out of curiosity to understand how computers actually work. During this time, I came across <span className="text-cyan-300 font-medium">Python</span> for the first time.
-            </p>
-          </div>
-        </div>
+          {/* vertical line */}
+          <div className="
+            absolute left-2 sm:left-4 top-0
+            w-[2px] h-full
 
-        {/* Second Card */}
-        <div className='relative ml-12 mb-10'>
+            bg-gradient-to-b
+            from-fuchsia-400
+            via-violet-400
+            to-cyan-400
 
-          {/* Dot */}
-          <div className='
-            absolute -left-10 top-3
-            w-4 h-4 rounded-full
-            bg-cyan-400
-            shadow-[0_0_10px_rgba(34,211,238,0.8)]
-          '></div>
+            opacity-70
+          "></div>
 
-          <div className={card}>
-            <p>
-              Fast forward to college, I chose BCA as my bachelor's degree to deepen my knowledge in computer applications. With multiple paths available, I explored different areas and eventually discovered <span className="text-cyan-300 font-medium">Data Structures and Algorithms</span>, which became an important part of my learning journey.
-            </p>
-          </div>
+          {/* title */}
+          <h2 className="
+            text-2xl sm:text-3xl
+            font-semibold
 
-        </div>
+            mb-10
+            tracking-wide
+            text-purple-300
 
-        
-      </div>
+            ml-10 sm:ml-12
+          ">
+            The Journey
+          </h2>
 
+          {/* CARD 1 */}
+          <div className="relative mb-10 ml-10 sm:ml-12">
 
-      {/* Timeline Container 2 */}
-      <div className='max-w-[40%]  px-6 mt-13 relative ml-60'
-      data-aos="fade-right">
+            {/* dot */}
+            <div className="
+              absolute
+              -left-8 sm:-left-10
+              top-3
 
-        {/* Vertical Line */}
-        <div className='
-          absolute left-4 top-0
-          w-[2px] h-full
-          bg-gradient-to-b from-fuchsia-400 via-violet-400 to-cyan-400
-          opacity-70
-        '></div>
+              w-4 h-4
+              rounded-full
 
-        {/* Section Title */}
-        <h2 className='text-2xl md:text-3xl font-semibold mb-10 tracking-wide text-purple-300 ml-12'>
-          continues...
-        </h2>
+              bg-fuchsia-400
 
-        {/* First Card */}
-        <div className='relative mb-10 ml-12 '>
+              shadow-[0_0_10px_rgba(168,85,247,0.8)]
+            "></div>
 
-          {/* Dot */}
-          <div className='
-            absolute -left-10 top-3
-            w-4 h-4 rounded-full
-            bg-fuchsia-400
-            shadow-[0_0_10px_rgba(168,85,247,0.8)]
-            '></div>
+            <div className={card}>
+              <p className="text-sm sm:text-base">
+                I started programming in 11th grade when I chose
+                Informatics Practices as an optional subject, purely
+                out of curiosity to understand how computers actually
+                work.
 
-          <div className={card}>
-            <p>
-             During my final year of college, I landed an internship as a <span className="text-cyan-300 font-medium">full-stack developer</span> at Kuchoriya Tech Soft. That was a turning point in my life, as it was my first step into the real world of development. I got to know how real projects are built and learned technologies like <span className="text-cyan-300 font-medium">Javascript</span> and <span className="text-cyan-300 font-medium">React</span>.
-            </p>
-          </div>
-        </div>
-
-        {/* Second Card */}
-        <div className='relative ml-12 mb-10'>
-
-          {/* Dot */}
-          <div className='
-            absolute -left-10 top-3
-            w-4 h-4 rounded-full
-            bg-cyan-400
-            shadow-[0_0_10px_rgba(34,211,238,0.8)]
-          '></div>
-
-          <div className={card}>
-            <p>
-             To be <span className="text-cyan-300 font-medium">Continued...</span>
-            </p>
-          </div>
-
-        </div>
-
-        
-      </div>
-
+                During this time, I came across{" "}
+                <span className="text-cyan-300 font-medium">
+                  Python
+                </span>{" "}
+                for the first time.
+              </p>
             </div>
-    </div>
-  )
-}
+          </div>
 
-export default About_me
+          {/* CARD 2 */}
+          <div className="relative mb-10 ml-10 sm:ml-12">
+
+            {/* dot */}
+            <div className="
+              absolute
+              -left-8 sm:-left-10
+              top-3
+
+              w-4 h-4
+              rounded-full
+
+              bg-cyan-400
+
+              shadow-[0_0_10px_rgba(34,211,238,0.8)]
+            "></div>
+
+            <div className={card}>
+              <p className="text-sm sm:text-base">
+                Fast forward to college, I chose BCA as my bachelor's
+                degree to deepen my knowledge in computer applications.
+
+                I explored multiple domains and eventually discovered{" "}
+                <span className="text-cyan-300 font-medium">
+                  Data Structures and Algorithms
+                </span>,
+                which became an important part of my learning journey.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        {/* ================= RIGHT TIMELINE ================= */}
+        <div
+          className="relative w-full xl:w-1/2"
+          data-aos="fade-left"
+        >
+
+          {/* vertical line */}
+          <div className="
+            absolute left-2 sm:left-4 top-0
+            w-[2px] h-full
+
+            bg-gradient-to-b
+            from-fuchsia-400
+            via-violet-400
+            to-cyan-400
+
+            opacity-70
+          "></div>
+
+          {/* title */}
+          <h2 className="
+            text-2xl sm:text-3xl
+            font-semibold
+
+            mb-10
+            tracking-wide
+            text-purple-300
+
+            ml-10 sm:ml-12
+          ">
+            Continues...
+          </h2>
+
+          {/* CARD 1 */}
+          <div className="relative mb-10 ml-10 sm:ml-12">
+
+            {/* dot */}
+            <div className="
+              absolute
+              -left-8 sm:-left-10
+              top-3
+
+              w-4 h-4
+              rounded-full
+
+              bg-fuchsia-400
+
+              shadow-[0_0_10px_rgba(168,85,247,0.8)]
+            "></div>
+
+            <div className={card}>
+              <p className="text-sm sm:text-base">
+
+                During my final year of college, I landed an internship
+                as a{" "}
+
+                <span className="text-cyan-300 font-medium">
+                  Full-Stack Developer
+                </span>{" "}
+
+                at Kuchoriya Tech Soft.
+
+                That experience became a turning point in my life because
+                it was my first step into real-world development.
+
+                I learned how production-level projects are built and
+                gained hands-on experience with technologies like{" "}
+
+                <span className="text-cyan-300 font-medium">
+                  JavaScript
+                </span>{" "}
+                and{" "}
+
+                <span className="text-cyan-300 font-medium">
+                  React
+                </span>.
+              </p>
+            </div>
+          </div>
+
+          {/* CARD 2 */}
+          <div className="relative mb-10 ml-10 sm:ml-12">
+
+            {/* dot */}
+            <div className="
+              absolute
+              -left-8 sm:-left-10
+              top-3
+
+              w-4 h-4
+              rounded-full
+
+              bg-cyan-400
+
+              shadow-[0_0_10px_rgba(34,211,238,0.8)]
+            "></div>
+
+            <div className={card}>
+              <p className="text-sm sm:text-base">
+                To be So far, I have solved over{" "}
+                <span className="text-cyan-300 font-medium">
+                  100+ LeetCode problems
+                </span>
+                .
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  );
+};
+
+export default About_me;

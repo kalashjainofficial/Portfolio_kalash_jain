@@ -147,14 +147,33 @@ const Experience = () => {
 
       <div className='flex-1 bg-gradient-to-b from-[#000000] via-[#4c28d0] to-[#000000] z-50 relative'>
 
-        {/* Line */}
-        <div className='
-      absolute left-0 top-[50%]
-      w-full h-[3px]
-      bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400
-      flex justify-center items-center
-      
-      '>
+        <div
+  className="
+    absolute
+
+    left-1/2 top-0
+    -translate-x-1/2
+
+    w-[2px] h-full
+
+    sm:left-0
+    sm:top-1/2
+    sm:translate-x-0
+    sm:-translate-y-1/2
+
+    sm:w-full
+    sm:h-[3px]
+
+    bg-gradient-to-b
+    sm:bg-gradient-to-r
+
+    from-fuchsia-400
+    via-violet-400
+    to-cyan-400
+
+    flex justify-center items-center
+  "
+>
 {/* card 1 kuchoriya techsoft */}
          <AboveCard
          className='left-[15%]'
