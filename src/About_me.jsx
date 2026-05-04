@@ -112,10 +112,7 @@ const About_me = () => {
 
             <div className={card}>
               <p className="text-sm sm:text-base">
-                I started programming in 11th grade when I chose
-                Informatics Practices as an optional subject, purely
-                out of curiosity to understand how computers actually
-                work.
+                It all started when I was in 11th grade and chose Informatics Practices as an optional subject, purely out of curiosity to understand how computers actually work.
 
                 During this time, I came across{" "}
                 <span className="text-cyan-300 font-medium">
@@ -258,10 +255,22 @@ const About_me = () => {
 
             <div className={card}>
               <p className="text-sm sm:text-base">
-                To be So far, I have solved over{" "}
+                That same curious boy has now solved {" "}
                 <span className="text-cyan-300 font-medium">
                   100+ LeetCode problems
                 </span>
+                , gained{' '}
+
+                <span className="text-cyan-300 font-medium">
+                  3+ months
+                </span>
+
+                {' '}of real-world development experience, and built {' '}
+                <span className="text-cyan-300 font-medium">
+                  Multiple projects
+                </span>
+                . What started as curiosity has now turned into skill—and this is just the beginning
+
                 .
               </p>
             </div>

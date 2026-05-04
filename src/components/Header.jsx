@@ -13,7 +13,7 @@ const Header = ({title = "section"}) => {
       <div className="relative flex flex-col ">
         
 
-        <h1 className="text-[clamp(2.4rem,3vw,4.5rem)] font-extrabold uppercase tracking-[0.22em] bg-gradient-to-r from-fuchsia-300 via-violet-300 to-cyan-300 text-transparent bg-clip-text drop-shadow-[0_0_18px_rgba(168,85,247,0.45)]">
+        <h1 className="text-[clamp(1.8rem,8vw,4.5rem)] font-extrabold uppercase tracking-[0.22em] bg-gradient-to-r from-fuchsia-300 via-violet-300 to-cyan-300 text-transparent bg-clip-text drop-shadow-[0_0_18px_rgba(168,85,247,0.45)] text-center sm:text-left">
           {title}
         </h1>
 

@@ -1,6 +1,6 @@
 
 import Orb from "./components/orb";
-import fphoto from "./components/images/front_photo.jpg";
+import fphoto from "./components/images/kalashjain_photo2.png";
 import aboutme from "./components/images/logo images/aboutme_logo.png";
 import experience from "./components/images/logo images/experience_logo.png";
 import contact from "./components/images/logo images/phone_logo.png";
@@ -43,11 +43,11 @@ transition-all duration-150
 
 
 
-  
 
 
 
-// info of buttons
+
+  // info of buttons
   const items = [
     { src: aboutme, alt: "about me", title: "About Me", link: "#aboutme", x: 6.5, y: 35 },
     { src: experience, alt: "experience", title: "Experience", link: "#experience", x: 5, y: 50 },
@@ -63,11 +63,11 @@ transition-all duration-150
   ];
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden bg-[radial-gradient(circle_at_right,_#380cbc_0%,_#000_60%)]">
+    <div className="relative w-full h-screen overflow-hidden bg-[radial-gradient(circle_at_right,_#380cbc_0%,_#000_60%)]">
 
       {/* img , orb , navbutton */}
-      <div className="absolute inset-0 flex items-center justify-end pr-10">
-        <div className="relative w-[90vw] max-w-[700px] aspect-square z-10">
+      <div className="absolute inset-0 flex items-center justify-center md:justify-end pt-12 md:pt-0 md:pb-0 md:pr-10">
+        <div className="relative w-[75vw] md:w-[90vw] max-w-[700px] aspect-square z-10">
           <Orb
             hue={360}
             hoverIntensity={0.5}
@@ -78,7 +78,7 @@ transition-all duration-150
           <img
             src={fphoto}
             alt="Profile"
-            className="absolute top-1/2 left-1/2 w-[75%] h-[75%] -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none"
+            className="absolute top-1/2 left-1/2 w-[75%] h-[75%] -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none [mask-image:radial-gradient(circle,black_35%,transparent_90%)] [-webkit-mask-image:radial-gradient(circle,black_35%,transparent_90%)]"
           />
 
           {items.map((item, index) => (
@@ -148,31 +148,33 @@ transition-all duration-150
       </div>
 
 
-{/* content of left-side */}
+      {/* content of left-side */}
       <div className="
-w-[60vw]
+absolute top-0 left-0 z-20 md:static md:z-auto
+w-full md:w-[60vw]
 h-screen 
-bg-white/5 backdrop-blur-lg 
-border border-white/10 border-l border-purple-400/40
-[clip-path:polygon(0_0,65%_0,100%_100%,0%_100%)]
--z-10
+bg-transparent md:bg-white/5 md:backdrop-blur-lg 
+border-none md:border-solid md:border-white/10 md:border-l md:border-purple-400/40
+md:[clip-path:polygon(0_0,65%_0,100%_100%,0%_100%)]
+pointer-events-none md:pointer-events-auto
 ">
 
         <div className="
-absolute top-[3%] left-[3%]
-px-[28px] py-5
+pointer-events-auto
+absolute top-[3%] left-[5%] md:left-[3%]
+px-[20px] md:px-[28px] py-4 md:py-5
 rounded-2xl
 bg-white/10 backdrop-blur-md
 border border-white/15
 shadow-[0_0_25px_rgba(168,85,247,0.25)]
-[clip-path:polygon(0_0,90%_0,100%_100%,0%_100%)]
-w-[45vw]
+[clip-path:polygon(0_0,95%_0,100%_100%,0%_100%)] md:[clip-path:polygon(0_0,90%_0,100%_100%,0%_100%)]
+w-[85vw] md:w-[45vw]
 ">
 
           <h1 className="
-    text-[clamp(2rem,3.5vw,3rem)]
+    text-[clamp(1.5rem,7vw,3rem)]
     font-extrabold
-    tracking-[0.35em]
+    tracking-[0.2em] md:tracking-[0.35em]
     uppercase
     bg-gradient-to-r from-fuchsia-300 via-violet-300 to-indigo-300
     text-transparent bg-clip-text
@@ -194,9 +196,9 @@ w-[45vw]
           </h1>
 
         </div  >
-        <h1 className="absolute top-[50%] left-[25%]
-text-[clamp(1.5rem,3vw,2.5rem)] font-medium
-text-slate-300 text-sm tracking-widest">
+        <h1 className="absolute top-[80%] md:top-[50%] left-[10%] md:left-[25%]
+text-[clamp(1.2rem,3vw,2.5rem)] font-medium
+text-slate-300 text-sm tracking-widest pointer-events-auto">
           Hi, I'm a</h1>
         <Typewriter />
 
@@ -205,8 +207,8 @@ text-slate-300 text-sm tracking-widest">
 
 
 
-{/* button to go to top */}
-      <div className="fixed bottom-5 right-5 z-[999] relative group">  
+      {/* button to go to top */}
+      <div className="fixed bottom-5 right-5 z-[999] relative group">
         <span className="
     pointer-events-none
     absolute bottom-15 -right-8 -translate-x-1/2 mb-2

@@ -1,5 +1,7 @@
 import React from "react";
 import Header from "./components/Header";
+import taskmanagementimg from "./components/images/project_imgs/task management project.png"
+import PortfolioWeb from "./components/images/project_imgs/portfolio_photo.png"
 
 function Projects() {
 
@@ -10,15 +12,15 @@ function Projects() {
       tech: ["React", "Tailwind", "JavaScript"],
       github: "https://github.com/your-link",
       live: "https://your-site-link",
-      image: "/images/portfolio.png",
+      image: PortfolioWeb,
     },
     {
       title: "Task Manager App",
       desc: "A full-stack task manager with authentication and CRUD operations.",
-      tech: ["React", "Node.js", "MongoDB"],
-      github: "https://github.com/your-link",
-      live: "",
-      image: "/images/task.png",
+      tech: ["React", "localstorage", "Tailwind", "JavaScript"],
+      github: "https://github.com/kalashjainofficial/Task_management_application",
+      live: "https://task-management-application-kalash.netlify.app/",
+      image: taskmanagementimg,
     },
   ];
 
@@ -105,7 +107,7 @@ function Projects() {
         </div>
 
         {/* Links */}
-        <div className="flex gap-4 absolute -bottom-80 left-0">
+        <div className="flex gap-4 mt-70">
           {github && (
             <a
               href={github}
@@ -147,10 +149,10 @@ function Projects() {
         gap-10
          
       "
-      style={{
-    background: "linear-gradient(to bottom, #000000, #1e126d, #000000, #1e126d, #000000)"
-  }}
-      
+        style={{
+          background: "linear-gradient(to bottom, #000000, #1e126d, #000000, #1e126d, #000000)"
+        }}
+
       >
         {projectsData.map((project, index) => (
           <ProjectCard key={index} {...project} />

@@ -23,8 +23,8 @@ const Experience = () => {
                 0_0_40px_rgba(168,85,247,0.5),
                 0_0_60px_rgba(168,85,247,0.3)]`
 
-  const AboveCard = ({ title, company, date, total_time, desc ,className }) => (
-    <div className={`group absolute flex justify-center items-center ${className}`} 
+  const AboveCard = ({ title, company, date, total_time, desc, className }) => (
+    <div className={`group absolute flex justify-center items-center ${className}`}
     >
 
       <div className={`${dot}
@@ -32,18 +32,27 @@ const Experience = () => {
       group-hover:bg-fuchsia-400
     `}></div>
 
-{/* line */}
-<div className="
+      {/* line desktop */}
+      <div className="
+  hidden md:block
   bottom-full mb-10
   w-[2px] h-9
   bg-white/0
   group-hover:bg-gradient-to-b from-cyan-400 to-transparent
 "></div>
+      {/* line mobile */}
+      <div className="
+  md:hidden
+  absolute left-full ml-2
+  w-6 h-[2px]
+  bg-white/0
+  group-hover:bg-gradient-to-r from-cyan-400 to-transparent
+"></div>
 
 
       <div className='
-      absolute bottom-full 
-      w-[300px]
+      absolute md:bottom-full left-10 md:left-auto top-1/2 md:top-auto -translate-y-1/2 md:translate-y-0
+      w-[75vw] md:w-[300px] max-w-[320px]
       bg-white/5 backdrop-blur-lg
       border border-white/10
       rounded-2xl
@@ -54,15 +63,15 @@ const Experience = () => {
       group-hover:border-purple-400/40
       group-hover:scale-[1.03]
     '
-    data-aos="fade-up"
-     data-aos-duration="1000">
+        data-aos="fade-up"
+        data-aos-duration="1000">
 
         <h3 className="text-lg font-semibold text-purple-300 mb-2">
           {title}
         </h3>
         <span className="text-xs text-cyan-300 bg-cyan-400/10 px-2 py-1  rounded-md absolute top-2 right-2">
-            {total_time}
-          </span>
+          {total_time}
+        </span>
 
         <p className="text-sm text-white/60 mb-2">
           {company}
@@ -70,7 +79,7 @@ const Experience = () => {
 
         <p className="text-xs text-purple-300 mb-3">
           {date}
-          
+
         </p>
 
         <p className="text-sm leading-relaxed">
@@ -82,7 +91,7 @@ const Experience = () => {
     </div>
   );
 
-  const BelowCard = ({ title, company, date, total_time, desc ,className }) => (
+  const BelowCard = ({ title, company, date, total_time, desc, className }) => (
     <div className={`group absolute flex justify-center items-center ${className}`}
     >
 
@@ -91,18 +100,27 @@ const Experience = () => {
       group-hover:bg-fuchsia-400
     `}></div>
 
-    
-{/* line */}
-<div className="
+
+      {/* line desktop */}
+      <div className="
+  hidden md:block
   top-full mt-10
   w-[2px] h-9
   bg-white/0
   group-hover:bg-gradient-to-b from-transparent to-cyan-400
 "></div>
+      {/* line mobile */}
+      <div className="
+  md:hidden
+  absolute left-full ml-2
+  w-6 h-[2px]
+  bg-white/0
+  group-hover:bg-gradient-to-r from-cyan-400 to-transparent
+"></div>
 
       <div className='
-      absolute top-full 
-      w-[300px]
+      absolute md:top-full left-10 md:left-auto top-1/2 md:top-auto -translate-y-1/2 md:translate-y-0
+      w-[75vw] md:w-[300px] max-w-[320px]
       bg-white/5 backdrop-blur-lg
       border border-white/10
       rounded-2xl
@@ -113,15 +131,15 @@ const Experience = () => {
       group-hover:border-purple-400/40
       group-hover:scale-[1.03]
     '
-    data-aos="fade-down"
-     data-aos-duration="1000">
+        data-aos="fade-down"
+        data-aos-duration="1000">
 
         <h3 className="text-lg font-semibold text-purple-300 mb-2">
           {title}
         </h3>
         <span className="text-xs text-cyan-300 bg-cyan-400/10 px-2 py-1  rounded-md absolute top-2 right-2">
-            {total_time}
-          </span>
+          {total_time}
+        </span>
 
         <p className="text-sm text-white/60 mb-2">
           {company}
@@ -129,7 +147,7 @@ const Experience = () => {
 
         <p className="text-xs text-purple-300 mb-3">
           {date}
-          
+
         </p>
 
         <p className="text-sm leading-relaxed">
@@ -141,31 +159,22 @@ const Experience = () => {
     </div>
   );
   return (
-    <div className='h-screen bg-black flex flex-col'>
+    <div className='min-h-screen md:min-h-screen md:h-screen bg-black flex flex-col'>
 
       <Header title='Experience' />
 
-      <div className='flex-1 bg-gradient-to-b from-[#000000] via-[#4c28d0] to-[#000000] z-50 relative'>
+      <div className='flex-1 min-h-[800px] md:min-h-0 bg-gradient-to-b from-[#000000] via-[#4c28d0] to-[#000000] z-50 relative'>
 
         <div
-  className="
+          className="
     absolute
 
-    left-1/2 top-0
-    -translate-x-1/2
+    left-[10%] md:left-0 top-0 md:top-1/2
+    -translate-x-1/2 md:translate-x-0 md:-translate-y-1/2
 
-    w-[2px] h-full
+    w-[2px] md:w-full h-full md:h-[3px]
 
-    sm:left-0
-    sm:top-1/2
-    sm:translate-x-0
-    sm:-translate-y-1/2
-
-    sm:w-full
-    sm:h-[3px]
-
-    bg-gradient-to-b
-    sm:bg-gradient-to-r
+    bg-gradient-to-b md:bg-gradient-to-r
 
     from-fuchsia-400
     via-violet-400
@@ -173,43 +182,24 @@ const Experience = () => {
 
     flex justify-center items-center
   "
->
-{/* card 1 kuchoriya techsoft */}
-         <AboveCard
-         className='left-[15%]'
-  title="Full Stack Intern"
-  company="Kuchoriya Tech Soft"
-  date="April 2026 – Present"
-  total_time="3 Months"
-desc={
-  <>
-    Worked on multiple projects using{" "}
-    <span className="text-cyan-300 font-medium">
-      HTML, CSS (Tailwind), JavaScript, and React
-    </span>
-    , gaining hands-on experience in building responsive user interfaces and developing dynamic web applications.
-  </>
-}
-/>
-
-   <BelowCard
-         className='left-[45%]'
-  title="Full Stack Intern"
-  company="Kuchoriya Tech Soft"
-  date="April 2026 – Present"
-  total_time="3 Months"
-desc={
-  <>
-    Worked on multiple projects using{" "}
-    <span className="text-cyan-300 font-medium">
-      HTML, CSS (Tailwind), JavaScript, and React
-    </span>
-    , gaining hands-on experience in building responsive user interfaces and developing dynamic web applications.
-  </>
-}
-/>
-
-
+        >
+          {/* card 1 kuchoriya techsoft */}
+          <AboveCard
+            className='top-[25%] md:top-auto md:left-[15%]'
+            title="Full Stack Intern"
+            company="Kuchoriya Tech Soft"
+            date="April 2026 – Present"
+            total_time="3 Months"
+            desc={
+              <>
+                Worked on multiple projects using{" "}
+                <span className="text-cyan-300 font-medium">
+                  HTML, CSS (Tailwind), JavaScript, and React
+                </span>
+                , gaining hands-on experience in building responsive user interfaces and developing dynamic web applications.
+              </>
+            }
+          />
 
 
         </div>

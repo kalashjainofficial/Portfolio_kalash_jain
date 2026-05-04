@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-      <div className='flex flex-col overflow-x-hidden'>
+      <div className='flex flex-col overflow-x-clip'>
 
         <div id="start">
           <Startpage />

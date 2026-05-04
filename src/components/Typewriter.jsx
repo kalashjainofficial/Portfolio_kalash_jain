@@ -38,7 +38,7 @@ function Typewriter() {
   }, [j, isDeleting, i]);
 
   return (
-    <div className="w-full h-full flex justify-center items-center absolute top-[12%] left-[0%]">
+    <div className="w-full h-full flex justify-center items-center absolute md:top-[12%] top-[45%] left-[0%] pointer-events-auto">
       <div className="flex items-center">
         <h1 className="text-[clamp(1.5rem,4vw,3rem)] font-bold
 bg-gradient-to-r from-purple-300 via-violet-400 to-indigo-400
