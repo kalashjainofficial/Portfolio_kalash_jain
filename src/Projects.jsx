@@ -10,8 +10,8 @@ function Projects() {
       title: "Portfolio Website",
       desc: "A modern animated portfolio built using React and Tailwind CSS with smooth UI and interactive elements.",
       tech: ["React", "Tailwind", "JavaScript"],
-      github: "https://github.com/your-link",
-      live: "https://your-site-link",
+      github: "https://github.com/kalashjainofficial/Portfolio_kalash_jain",
+      live: "https://portfolio-kalashjain.netlify.app/",
       image: PortfolioWeb,
     },
     {
