@@ -41,9 +41,9 @@ function Contact() {
 
         {/* Left Side: Info */}
         <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-8 max-w-md w-full text-center lg:text-left shadow-[0_0_30px_rgba(168,85,247,0.15)] flex flex-col justify-center">
-          <h2 className="text-3xl font-bold text-cyan-300 mb-6">Let's Connect</h2>
+          <h2 className="text-3xl font-bold text-cyan-300 mb-6">Let’s build something worth remembering.</h2>
           <p className="text-white/70 mb-8 leading-relaxed text-lg">
-            I'm currently looking for new opportunities. Whether you have a question, a project idea, or just want to say hi, I'd love to hear from you!
+            Building beyond what others believe is possible.
           </p>
 
           <div className="flex justify-center lg:justify-start gap-6 mt-8">
